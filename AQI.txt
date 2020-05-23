@@ -1,0 +1,10 @@
+
+Understanding Indian Air Quality Index(AQI)
+
+Air Pollution / By Nirvana
+
+In an attempt to make air quality measurement easier to understand, the ministry of environment and forests launched a National Air Quality Index (AQI). It will put out real time data about level of pollutants in the air and inform people about possible impacts on health.
+
+Government have added five more components to the new measurement process: Particulate Matter 2.5, ozone, carbon monoxide, ammonia and lead
+
+The index classifies air quality simply as good, satisfactory, moderately polluted, poor, very poor, and severe. Each band is represented by a colour code to visually express the level of severity that people can grasp easily.
