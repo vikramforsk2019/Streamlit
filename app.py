@@ -14,14 +14,73 @@ st.title("AIR Quality Analysis")
 
 # Text
 #st.text("For a simple text")
+activity = ['Analysis','About',]
+choice = st.sidebar.selectbox("Select Activity",activity)
 
 html_temp = """
-<div style="background-color:tomato;"><p style="color:green;font-size:60px;"> COVID 19 AQI OF INDIA</p></div>
+<div style="background-color:tomato;"><p style="color:green;font-size:40px;">Impact of Air Pollution on our Lives</p></div>
 	"""
 st.markdown(html_temp,unsafe_allow_html=True)
 
 img = Image.open("air.jpeg")
 st.image(img,width=800,caption='INDIA AIR AQI')
+img = Image.open("air4.png")
+st.info("Air pollution in India is a serious health issue Of the most polluted cities in the world, \
+	21 out of 30 were in India in 2019.The 51% of pollution is caused by the industrial pollution, \
+	27% by vehicles, 17% by crop burning and 5% by diwali fireworks.")
+st.image(img,width=800,caption='AIR AQI Different aspects')
+if st.checkbox("Show More"):
+	st.text('1.Agricultural Burning is also a Major Problem ')
+	st.info("Like tens of thousands of farmers in India’s northern states of Haryana, Punjab and Uttar Pradesh, \
+		Satish, whose farm sits on the outskirts of the rural Haryana village of Gharaunda, had recently cleared \
+		his fields of old rice crop stubble to make way for wheat by setting it alight. The practice was banned \
+		when its contribution to the mounting pollution crisis in nearby Delhi and across northern India became \
+		impossible to ignore, but deprived of equally cheap and easy alternatives of preparing the fields, farmers \
+		have continued to flout the law.As record-breaking pollution threw Delhi into a state of crisis this week, \
+		and the city was shrouded in a thick brown smog with toxins over 50 times the levels deemed healthy, crop \
+		burning – which began in earnest in late October and is due to continue for the rest of the month – was \
+		labelled as the chief culprit. According to the government environment agency, almost 50% of Delhi’s \
+		pollution was from crop burning.")
+	st.text('2.Traffic')
+	st.success("One of the sources of PM 2.5 particles is car engine exhaust. While campaigning for more public  \
+		transportation usage is in general good for the environment, the effectiveness toward reducing PM 2.5 \
+		pollution is unclear. ")
+	st.text("3.Industry And Power Generation")
+	st.success("Various studies clearly show that causes of pollution, especially in Northern India cannot \
+	 attributed to the farmers alone for burning farm biomass. Major share of the pollution is contributed by \
+	 vehicular and industrial emissions.")
+	st.info("Together, household air pollution from cooking and ambient (outside) air pollution cause more \
+		han 50% of acute lower respiratory infections in children under 5 years of age in low- and \
+		middle-income countries.")
+img = Image.open("air5.jpeg")
+st.image(img,width=800,caption='impact of AIR pollution on health')
+img = Image.open("air7.jpeg")
+if st.checkbox("Show Health More"):
+	st.success("Air pollution is one of the leading threats to child health, \
+accounting for almost 1 in 10 deaths in children under five years of age.Every day around 93% of the world’s \
+children under the age of 15 years (1.8 billion children) breathe air that is so polluted it puts their \
+health and development at serious risk. According to a new report from the World Health Organization (WHO)\
+600,000 children died from acute lower respiratory infections caused by polluted air in 2016.\
+The new report also reveals that when pregnant women are exposed to polluted air, \
+they are more likely to give birth prematurely, and have small, low birth-weight children. \
+Air pollution also impacts neurodevelopment and cognitive ability and can trigger asthma, and \
+childhood cancer. Children who have been exposed to high levels of air pollution may be at greater \
+risk for chronic diseases such as cardiovascular disease later in life.")
+	st.info("The health impact of air pollution is quite severe. It is estimated that 29% of cardiopulmonary \
+		deaths and 40% of lung cancer deaths are attributable to air pollution.Mothers and young children are \
+		especially vulnerable. During winter months (when pollution is highest) fetal deaths increase 3.5 times \
+		and birth defects are more common.")
+st.image(img,width=800,caption='Delhi before and after covid 19 image')
+if st.checkbox("show  Delhi"):
+	st.info("So if we are prepared to extrapolate up to high-levels of PM2.5, long-term exposure to Delhi’s \
+	air is roughly equivalent to smoking 20 cigarettes a day, and will reduce life expectancy of inhabitants \
+	by around 7 years, equivalent to losing around 3 hours life a day.")
+img = Image.open("air6.jpeg")
+st.image(img,width=800,caption='Solutions to overcome this pollution')
+if st.checkbox("show Solutions"):
+	st.info("All countries should work towards meeting WHO global air quality guidelines to enhance the h\
+		ealth and safety of children.reducing the over-dependence on fossil fuels in the global energy mix,\
+investing in improvements in energy efficiency and,facilitating the uptake of renewable energy sources.")
 # Videos
 
 video_file = open("hare.mp4",'rb')
@@ -176,6 +235,11 @@ if st.checkbox("Which city has highest PM2.5"):
 
 
 # SIDE Bar
-st.sidebar.header("AIR Side bar")
-st.sidebar.text("INDIA")
-st.sidebar.text("other's")
+if choice =="About":
+	st.sidebar.header("AIR Side bar")
+	st.sidebar.text("INDIA")
+	st.sidebar.text("other's")
+	st.subheader("About us")
+	st.info("Designed by Vikram")
+	st.text("Data Science")
+	st.success("Machine Learning Built with Streamlit")
