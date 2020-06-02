@@ -75,3 +75,40 @@ Solutions--->
 -----------
 One of the earliest solutions for solving the air pollution problem was to replace the inefficient stoves with new clean burning stoves. This project, starting in 2013 and finishing in 2018, is funded primarily from the World Bank through a $15 million USD loan. These
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AIR POLLUTION FORECASTING USING LSTM
+Steps followed:
+
+    Data preparation
+    Data visualization
+    LSTM data preparation
+    Fit model along with regularization term
+    Evaluate model
+
+Data preparation:
+
+    Replace NA values
+    Parse date-time into pandas dataframe index
+    Specified clear names for each columns
+
