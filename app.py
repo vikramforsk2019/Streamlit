@@ -5,6 +5,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib
+from sklearn.externals import joblib
+import matplotlib.pyplot as plt
 matplotlib.use('Agg')
 # Title
 st.title("AIR Quality Analysis")
@@ -82,10 +84,6 @@ if choice=="Analysis":
 			ealth and safety of children.reducing the over-dependence on fossil fuels in the global energy mix,\
 	investing in improvements in energy efficiency and,facilitating the uptake of renewable energy sources.")
 	# Videos
-
-	video_file = open("hare.mp4",'rb')
-	video_bytes = video_file.read()
-	st.video(video_bytes)
 
 	df=pd.read_csv('city_day.csv')
 	df['Date'] = pd.to_datetime(df['Date'])
@@ -212,6 +210,51 @@ if choice=="Analysis":
 		ax1.pie(no['PM2.5'].tolist(), labels=no['City'].tolist(), autopct='%1.1f%%',
 		        shadow=True, startangle=90)
 		plt.legend(loc='right',bbox_to_anchor=(1.2,0.9))
+		plt.show()
+		st.pyplot()
+
+	st.subheader("Prediction")
+	if st.checkbox("Make Prediction"):
+		df = pd.read_csv("city_day.csv")
+		df.head(5)
+		df.isnull().sum()
+
+		df=df.fillna(df.mean())
+
+		x1 = df.iloc[:,:13].values
+
+		y1 = df.iloc[:,14:15].values
+
+		z1 = pd.DataFrame(x1)
+		z1=z1.drop([1], axis=1)
+
+		x1 = z1.iloc[:,0:11].values
+		z1 = pd.DataFrame(x1)
+		from sklearn.preprocessing import OneHotEncoder
+
+		ohe = OneHotEncoder()
+		x_new1 = pd.DataFrame(ohe.fit_transform(x1[:,[0]]).toarray()) #state
+		feature_set = pd.concat([x_new1,pd.DataFrame(z1.iloc[:,2:].values)],axis=1,sort=False)
+
+		from sklearn.model_selection import train_test_split
+		from sklearn.linear_model import LinearRegression
+		from sklearn.preprocessing import PolynomialFeatures
+		from sklearn.tree import DecisionTreeRegressor
+		from sklearn.ensemble import RandomForestRegressor
+		from sklearn.svm import SVR
+
+		x_train,x_test,y_train,y_test = train_test_split(feature_set,y1,test_size=0.25,random_state=0)
+		classifer = joblib.load("model.pkl")
+		y_predict = classifer.predict(x_test)
+		plt.plot(y_predict[:20],color ='orange', 
+         marker ='o', markersize = 12,  
+         label ='predict')
+		plt.plot(y_test[:20],color ='g', 
+         linestyle ='dashed', linewidth = 2, 
+         label ='actual')
+		plt.title('AQI Level in different years') 
+		plt.ylabel('AQI')
+		plt.legend() 
 		plt.show()
 		st.pyplot()
 

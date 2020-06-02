@@ -1,0 +1,114 @@
+
+Understanding Indian Air Quality Index(AQI)
+
+Air Pollution / By Nirvana
+
+In an attempt to make air quality measurement easier to understand, the ministry of environment and forests launched a National Air Quality Index (AQI). It will put out real time data about level of pollutants in the air and inform people about possible impacts on health.
+
+Government have added five more components to the new measurement process: Particulate Matter 2.5, ozone, carbon monoxide, ammonia and lead
+
+The index classifies air quality simply as good, satisfactory, moderately polluted, poor, very poor, and severe. Each band is represented by a colour code to visually express the level of severity that people can grasp easily.
+
+
+
+
+The main source of pollution comes from particles smaller than 2.5 micrometer (PM 2.5 particles). These particles are smaller than the width of a human hair and can easily enter our bodies, even making their way into our blood. 
+
+1.Agricultural Burning is a Major Problem !----->
+
+Farmers in Southeast Asia pick January — March as their burning season. For the north and northeastern provinces in Thailand, these burning activities are large enough to make these provinces among the most polluted places in the world during this time. For Bangkok, one might argue that because the region is heavily industrial rather than agricultural, it may not be affected as much by agricultural burning. But this is not the case.
+Because of the tiny size of PM 2.5 particles, they remain suspended in the atmosphere for prolonged periods and can travel over very long distances. 
+
+2.Traffic Index------------------------------------>
+One of the sources of PM 2.5 particles is car engine exhaust. While campaigning for more public transportation usage is in general good for the environment, the effectiveness toward reducing PM 2.5 pollution is unclear. Here is why.
+
+3.industrial pollution----------------------------->
+The 51% of pollution is caused by the industrial pollution, 27% by vehicles, 17% by crop burning and 5% by diwali fireworks. Air pollution contributes to the premature deaths of 2 million Indians every year.
+
+conclusion----
+The PM 2.5 level has a complex relationship with various factors: number of fires, weather patterns, and traffic
+But this analysis confirms the suspicion that many people have — agricultural burning is the root cause of PM 2.5 pollution in Thailand. Burning activities as far as 720 km away from Bangkok, an area which extends into Myanmar, Laos, and Cambodia, can cause air problems in Bangkok. Solving this problem will not be easy. It will require a collaborative international effort among the Southeast Asian countries.
+
+
+
+
+
+
+
+
+
+So if we are prepared to extrapolate up to high-levels of PM2.5, long-term exposure to Delhi’s air is roughly equivalent to smoking 20 cigarettes a day, and will reduce life expectancy of inhabitants by around 7 years, equivalent to losing around 3 hours life a day.
+------------------------------------------------------------------->
+Health Impacts------>>>
+---------------
+The health impact of air pollution is quite severe. It is estimated that 29% of cardiopulmonary deaths and 40% of lung cancer deaths are attributable to air pollution.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3578716/       (link)
+Mothers and young children are especially vulnerable. During winter months (when pollution is highest) fetal deaths increase 3.5 times and birth defects are more common.
+
+
+
+***important***
+
+Air pollution is one of the leading threats to child health, accounting for almost 1 in 10 deaths in children under five years of age.
+***               *************
+Every day around 93% of the world’s children under the age of 15 years (1.8 billion children) breathe air that is so polluted it puts their health and development at serious risk. According to a new report from the World Health Organization (WHO) 600,000 children died from acute lower respiratory infections caused by polluted air in 2016.
+
+The new report also reveals that when pregnant women are exposed to polluted air, they are more likely to give birth prematurely, and have small, low birth-weight children. Air pollution also impacts neurodevelopment and cognitive ability and can trigger asthma, and childhood cancer. Children who have been exposed to high levels of air pollution may be at greater risk for chronic diseases such as cardiovascular disease later in life.
+
+“Polluted air is poisoning millions of children and ruining their lives,” says Dr Tedros Adhanom Ghebreyesus, WHO Director-General. “This is inexcusable. Every child should be able to breathe clean air so they can grow and fulfil their full potential.”
+
+Newborns and young children are also more susceptible to household air pollution in homes that regularly use polluting fuels and technologies for cooking, heating and lighting.
+
+Together, household air pollution from cooking and ambient (outside) air pollution cause more than 50% of acute lower respiratory infections in children under 5 years of age in low- and middle-income countries.
+------------------------------------------>
+
+What policies to reduce air pollution?
+
+All countries should work towards meeting WHO global air quality guidelines to enhance the health and safety of children.
+
+    reducing the over-dependence on fossil fuels in the global energy mix,
+    investing in improvements in energy efficiency and,
+    facilitating the uptake of renewable energy sources.
+Better waste management can also educe the amount of waste that is burned within communities and thereby reducing ‘community air pollution’. The exclusive use of clean technologies and fuels for household cooking, heating and lighting activities can drastically improve the air quality within homes and in the surrounding community.
+
+Solutions--->
+-----------
+One of the earliest solutions for solving the air pollution problem was to replace the inefficient stoves with new clean burning stoves. This project, starting in 2013 and finishing in 2018, is funded primarily from the World Bank through a $15 million USD loan. These
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AIR POLLUTION FORECASTING USING LSTM
+Steps followed:
+
+    Data preparation
+    Data visualization
+    LSTM data preparation
+    Fit model along with regularization term
+    Evaluate model
+
+Data preparation:
+
+    Replace NA values
+    Parse date-time into pandas dataframe index
+    Specified clear names for each columns
+

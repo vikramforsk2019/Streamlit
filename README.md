@@ -13,6 +13,11 @@ Building a Matplotlib to Plotly chart convert.
 1.dataset 
 download the dataset from kaggle
 https://www.kaggle.com/rohanrao/air-quality-data-in-india
-2.
-
+# Libraries Used
+ numpy, pandas,sklearn,pkl,joblib,matplotlib,seaborn,streamlit.
+# IDE used: 
+spyder (Anaconda 3),sublime,spyder3.
+# project
+run the app.py
+streamlit run app.py
 
