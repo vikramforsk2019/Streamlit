@@ -21,3 +21,4 @@ spyder (Anaconda 3),sublime,spyder3.
 run the app.py
 streamlit run app.py
 
+![air2](https://user-images.githubusercontent.com/51817568/83624198-f1094d80-a5af-11ea-9534-327c999e9c5a.gif)
