@@ -22,3 +22,6 @@ run the app.py
 streamlit run app.py
 
 ![air2](https://user-images.githubusercontent.com/51817568/83624198-f1094d80-a5af-11ea-9534-327c999e9c5a.gif)
+![air5](https://user-images.githubusercontent.com/51817568/83624395-2d3cae00-a5b0-11ea-8bb5-7a6e418d7c56.jpeg)
+![air6](https://user-images.githubusercontent.com/51817568/83624403-2f9f0800-a5b0-11ea-8225-c391b986dae8.jpeg)
+![air8](https://user-images.githubusercontent.com/51817568/83624412-33cb2580-a5b0-11ea-9599-3339c36957a7.jpeg)
