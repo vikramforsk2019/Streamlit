@@ -5,7 +5,10 @@ pip install --upgrade streamlit opencv-python
 ----------------------------------------------------------------------------------------------------------------------------------------------
 # Streamlit Data Science and ML Apps in Python
  Streamlit’s open-source app framework is the easiest way for data scientists and machine learning engineers to create beautiful, performant apps, All in pure Python.
-
+# ML Models
+1.Linear Regression
+2.Logistic Regression
+3.polynomial Regression
 # DATA ANALYTICS ON CORONA VIRUS
 i have created data analytics on corona virus using machine learning with Streamlit.
 Building a Matplotlib to Plotly chart convert.
