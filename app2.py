@@ -19,14 +19,14 @@ from sklearn.externals import joblib
 import matplotlib.pyplot as plt
 import os
 def model_use(feature_set):
-        model_list=['MR','PR','DTR','RF','SVR']
+        model_list=['Multiple Regression.pkl','Decision tree.pkl']
         if st.checkbox('select Models for prediction'):
             selected=st.selectbox('Select',model_list)
         x_train,x_test,y_train,y_test = train_test_split(feature_set,y1,test_size=0.25,random_state=0)
-        if selected=='MR':
-            selected='mregression.pkl'
+        if selected:
             model_pkl=os.path.join('models pkl/',selected)
         classifer = joblib.load(model_pkl)
+        
         y_predict = classifer.predict(x_test)
         plt.plot(y_predict[:20],color ='orange', 
          marker ='o', markersize = 12,  

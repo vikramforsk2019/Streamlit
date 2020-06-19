@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-
-
+  
 @author: jagveer
 """
-import numpy as np
 import pandas as pd
 
 df = pd.read_csv("city_day.csv")
@@ -48,8 +46,6 @@ y_predict = mreg.predict(x_test)
 print (df) 
 from matplotlib import pyplot as plt
 #Visualize the best fit line
-import matplotlib.pyplot as plt
-import seaborn as sns
 #df['Date'] = pd.to_datetime(df['Date'])
 #df['year'] = df['Date'].dt.year
 #year=df['year']
@@ -66,14 +62,6 @@ plt.legend()
 plt.show()
 
 
-# Use the loaded pickled model to make predictions 
-from sklearn.externals import joblib
-joblib.dump(mreg, "model.pkl")
-
-# Load model from file
-classifer = joblib.load("model.pkl")
-classifer.predict(x_test) 
-
 
 # polynomial regression model
 # degree = 2
@@ -85,13 +73,17 @@ preg.fit(pf,y_train)
 
 pr_y_predict = preg.predict(poly_reg.fit_transform(x_test))
 
+# decision tree regression model
 
+dec_tree = DecisionTreeRegressor(random_state = 0)
+dec_tree.fit(x_train,y_train)
+
+dt_y_predict = dec_tree.predict(x_test)
 # random forest regression model
 # random forest with 500 trees
 
 rt_reg = RandomForestRegressor(n_estimators = 500, random_state = 0)
 rt_reg.fit(x_train,y_train)
-
 rt_y_predict = rt_reg.predict(x_test)
 
 # --- feature scaling the paramenters for better results ---
@@ -109,9 +101,26 @@ svr_y_predict = sc_y.inverse_transform(svr_reg.predict(sc_x.transform(x_test)))
 
 
 
+# Use the loaded pickled model to make predictions 
+from sklearn.externals import joblib
+joblib.dump(mreg,"Multiple Regression.pkl")
+joblib.dump(preg, "pregression.pkl")
+joblib.dump(dec_tree, "Decision tree.pkl")
+joblib.dump(rt_reg, "RandomForest.pkl")
+joblib.dump(svr_reg, "svrression.pkl")
+
+# Load model from file
+classifer = joblib.load("pregression.pkl")
+classifer.predict(x_test) 
+classifer.predict(poly_reg.fit_transform(x_test)) 
 
 
-
+model_list=['MR','PR','DTR','RF','SVR']
+import streamlit as st
+if st.checkbox('select columns to show'):	 
+	 selected=st.multiselect('Select',model_list)
+	 #new_df=df[selected]
+	 st.write(selected)
 
 
 

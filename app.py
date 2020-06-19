@@ -1,13 +1,12 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 from PIL import Image 
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib
 from sklearn.externals import joblib
-import matplotlib.pyplot as plt
 matplotlib.use('Agg')
+
 # Title
 st.title("AIR Quality Analysis")
 
