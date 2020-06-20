@@ -1,7 +1,7 @@
 # Streamlit
 Create a data explorer app.
 # install streamlit
-pip install --upgrade streamlit opencv-python
+pip install streamlit 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 # Streamlit Data Science and ML Apps in Python
  Streamlit’s open-source app framework is the easiest way for data scientists and machine learning engineers to create beautiful, performant apps, All in pure Python.
