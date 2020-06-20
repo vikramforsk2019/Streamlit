@@ -222,23 +222,25 @@ def model_use(feature_set):
         st.write('continue')
         if st.checkbox('select Models for prediction'):
             selected=st.selectbox('Select',model_list)
-        x_train,x_test,y_train,y_test = train_test_split(feature_set,y1,test_size=0.25,random_state=0)
-        if selected:
             model_pkl=os.path.join('models pkl/',selected)
-        classifer = joblib.load(model_pkl)
-        
-        y_predict = classifer.predict(x_test)
-        plt.plot(y_predict[:20],color ='orange', 
+            classifer = joblib.load(model_pkl)
+            x_train,x_test,y_train,y_test = train_test_split(feature_set,y1,test_size=0.25,random_state=0)
+            y_predict = classifer.predict(x_test)
+            plt.plot(y_predict[:20],color ='orange', 
          marker ='o', markersize = 12,  
          label ='predict')
-        plt.plot(y_test[:20],color ='g', 
+            plt.plot(y_test[:20],color ='g', 
          linestyle ='dashed', linewidth = 2, 
          label ='actual')
-        plt.title('AQI Level in different years') 
-        plt.ylabel('AQI')
-        plt.legend() 
-        plt.show()
-        st.pyplot()        
+            plt.title('AQI Level in different years') 
+            plt.ylabel('AQI')
+            plt.legend() 
+            plt.show()
+            st.pyplot()
+        else:
+        	st.write('pls Select Model')
+
+        
 if st.checkbox("Make Prediction"):
     df = pd.read_csv("city_day.csv")
     df.head(5)
