@@ -8,11 +8,6 @@ Created on Thu Jun 18 18:41:11 2020
 
 import streamlit as st   
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.svm import SVR
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.externals import joblib

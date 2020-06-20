@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib
 from sklearn.externals import joblib
+from sklearn.model_selection import train_test_split
+import os
+from sklearn.preprocessing import OneHotEncoder
 matplotlib.use('Agg')
 
 # Title
@@ -211,54 +214,47 @@ if choice=="Analysis":
 		plt.legend(loc='right',bbox_to_anchor=(1.2,0.9))
 		plt.show()
 		st.pyplot()
-
-	st.subheader("Prediction")
-	if st.checkbox("Make Prediction"):
-		df = pd.read_csv("city_day.csv")
-		df.head(5)
-		df.isnull().sum()
-
-		df=df.fillna(df.mean())
-
-		x1 = df.iloc[:,:13].values
-
-		y1 = df.iloc[:,14:15].values
-
-		z1 = pd.DataFrame(x1)
-		z1=z1.drop([1], axis=1)
-
-		x1 = z1.iloc[:,0:11].values
-		z1 = pd.DataFrame(x1)
-		from sklearn.preprocessing import OneHotEncoder
-
-		ohe = OneHotEncoder()
-		x_new1 = pd.DataFrame(ohe.fit_transform(x1[:,[0]]).toarray()) #state
-		feature_set = pd.concat([x_new1,pd.DataFrame(z1.iloc[:,2:].values)],axis=1,sort=False)
-
-		from sklearn.model_selection import train_test_split
-		from sklearn.linear_model import LinearRegression
-		from sklearn.preprocessing import PolynomialFeatures
-		from sklearn.tree import DecisionTreeRegressor
-		from sklearn.ensemble import RandomForestRegressor
-		from sklearn.svm import SVR
-
-		x_train,x_test,y_train,y_test = train_test_split(feature_set,y1,test_size=0.25,random_state=0)
-		classifer = joblib.load("model.pkl")
-		y_predict = classifer.predict(x_test)
-		plt.plot(y_predict[:20],color ='orange', 
+def model_use(feature_set):
+        selected=''
+        model_pkl=''
+        classifer=''
+        model_list=['Multiple Regression.pkl','Decision tree.pkl']
+        st.write('continue')
+        if st.checkbox('select Models for prediction'):
+            selected=st.selectbox('Select',model_list)
+        x_train,x_test,y_train,y_test = train_test_split(feature_set,y1,test_size=0.25,random_state=0)
+        if selected:
+            model_pkl=os.path.join('models pkl/',selected)
+        classifer = joblib.load(model_pkl)
+        
+        y_predict = classifer.predict(x_test)
+        plt.plot(y_predict[:20],color ='orange', 
          marker ='o', markersize = 12,  
          label ='predict')
-		plt.plot(y_test[:20],color ='g', 
+        plt.plot(y_test[:20],color ='g', 
          linestyle ='dashed', linewidth = 2, 
          label ='actual')
-		plt.title('AQI Level in different years') 
-		plt.ylabel('AQI')
-		plt.legend() 
-		plt.show()
-		st.pyplot()
-
-
-
+        plt.title('AQI Level in different years') 
+        plt.ylabel('AQI')
+        plt.legend() 
+        plt.show()
+        st.pyplot()        
+if st.checkbox("Make Prediction"):
+    df = pd.read_csv("city_day.csv")
+    df.head(5)
+    df.isnull().sum()
+    df=df.fillna(df.mean())
+    x1 = df.iloc[:,:13].values
+    y1 = df.iloc[:,14:15].values
+    z1 = pd.DataFrame(x1)
+    z1=z1.drop([1], axis=1)
+    x1 = z1.iloc[:,0:11].values
+    z1 = pd.DataFrame(x1)
+    ohe = OneHotEncoder()
+    x_new1 = pd.DataFrame(ohe.fit_transform(x1[:,[0]]).toarray()) #state
+    feature_set = pd.concat([x_new1,pd.DataFrame(z1.iloc[:,2:].values)],axis=1,sort=False)
+    model_use(feature_set)
+    
 
 
 
