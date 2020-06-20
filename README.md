@@ -5,6 +5,7 @@ pip install streamlit
 ----------------------------------------------------------------------------------------------------------------------------------------------
 # Streamlit Data Science and ML Apps in Python
  Streamlit’s open-source app framework is the easiest way for data scientists and machine learning engineers to create beautiful, performant apps, All in pure Python.
+ https://www.streamlit.io/
 ## Machine learning models used #
 In this project we are using regression models such as:
 * Multiple Linear Regression</br>
