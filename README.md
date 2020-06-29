@@ -14,7 +14,7 @@ In this project we are using regression models such as:
 * Random Forest Regression</br>
 * Support Vector regression (SVR)
 
-# DATA ANALYTICS ON CORONA VIRUS
+# DATA ANALYTICS ON AIR POLLUTION
 i have created data analytics on corona virus using machine learning with Streamlit.
 Building a Matplotlib to Plotly chart convert.
 # Impact of Air Pollution on our Lives [Vehicular and Industrial Pollution to be taken as key point]
@@ -34,3 +34,5 @@ streamlit run app.py
 ![air6](https://user-images.githubusercontent.com/51817568/83624403-2f9f0800-a5b0-11ea-8225-c391b986dae8.jpeg)
 ![air8](https://user-images.githubusercontent.com/51817568/83624412-33cb2580-a5b0-11ea-9599-3339c36957a7.jpeg)
 ![air](https://user-images.githubusercontent.com/51817568/84915675-bb4d8400-b0da-11ea-80cf-d98f867d1633.jpeg)
+#  DATA ANALYTICS ON AIR POLLUTION using Power BI
+https://app.powerbi.com/groups/me/dashboards/435fb732-5165-47f7-816b-5fd95a73bbde?ctid=9a99984a-d810-43f1-b992-dd5f00d2f333
