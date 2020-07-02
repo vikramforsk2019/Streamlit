@@ -30,7 +30,8 @@ run the app.py
 streamlit run app.py
 ![model_predict](https://user-images.githubusercontent.com/51817568/85129567-efe34c00-b250-11ea-8716-289f8fa9fc0a.png)
 #![air2](https://user-images.githubusercontent.com/51817568/83624198-f1094d80-a5af-11ea-9534-327c999e9c5a.gif)
-![air5](https://user-images.githubusercontent.com/51817568/83624395-2d3cae00-a5b0-11ea-8bb5-7a6e418d7c56.jpeg)
+#![air5](https://user-images.githubusercontent.com/51817568/83624395-2d3cae00-a5b0-11ea-8bb5-7a6e418d7c56.jpeg)
 ![air](https://user-images.githubusercontent.com/51817568/84915675-bb4d8400-b0da-11ea-80cf-d98f867d1633.jpeg)
 #  DATA ANALYTICS ON AIR POLLUTION using Power BI
+![power bi](bi1.png)
 https://app.powerbi.com/groups/me/dashboards/435fb732-5165-47f7-816b-5fd95a73bbde?ctid=9a99984a-d810-43f1-b992-dd5f00d2f333
