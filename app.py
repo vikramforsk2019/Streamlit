@@ -7,6 +7,7 @@ import matplotlib
 from sklearn.externals import joblib
 from sklearn.model_selection import train_test_split
 import os
+import base64
 from sklearn.preprocessing import OneHotEncoder
 matplotlib.use('Agg')
 
@@ -269,3 +270,5 @@ if choice =="About":
 	st.info("Designed by Vikram")
 	st.text("Data Science")
 	st.success("Machine Learning Built with Streamlit")
+
+
