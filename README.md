@@ -1,10 +1,11 @@
 # Streamlit
 Create a data explorer app.
 # install streamlit
-pip install --upgrade streamlit opencv-python
+pip install streamlit 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 # Streamlit Data Science and ML Apps in Python
  Streamlit’s open-source app framework is the easiest way for data scientists and machine learning engineers to create beautiful, performant apps, All in pure Python.
+ https://www.streamlit.io/
 ## Machine learning models used #
 In this project we are using regression models such as:
 * Multiple Linear Regression</br>
@@ -13,7 +14,7 @@ In this project we are using regression models such as:
 * Random Forest Regression</br>
 * Support Vector regression (SVR)
 
-# DATA ANALYTICS ON CORONA VIRUS
+# DATA ANALYTICS ON AIR POLLUTION
 i have created data analytics on corona virus using machine learning with Streamlit.
 Building a Matplotlib to Plotly chart convert.
 # Impact of Air Pollution on our Lives [Vehicular and Industrial Pollution to be taken as key point]
@@ -30,6 +31,6 @@ streamlit run app.py
 ![model_predict](https://user-images.githubusercontent.com/51817568/85129567-efe34c00-b250-11ea-8716-289f8fa9fc0a.png)
 #![air2](https://user-images.githubusercontent.com/51817568/83624198-f1094d80-a5af-11ea-9534-327c999e9c5a.gif)
 ![air5](https://user-images.githubusercontent.com/51817568/83624395-2d3cae00-a5b0-11ea-8bb5-7a6e418d7c56.jpeg)
-![air6](https://user-images.githubusercontent.com/51817568/83624403-2f9f0800-a5b0-11ea-8225-c391b986dae8.jpeg)
-![air8](https://user-images.githubusercontent.com/51817568/83624412-33cb2580-a5b0-11ea-9599-3339c36957a7.jpeg)
 ![air](https://user-images.githubusercontent.com/51817568/84915675-bb4d8400-b0da-11ea-80cf-d98f867d1633.jpeg)
+#  DATA ANALYTICS ON AIR POLLUTION using Power BI
+https://app.powerbi.com/groups/me/dashboards/435fb732-5165-47f7-816b-5fd95a73bbde?ctid=9a99984a-d810-43f1-b992-dd5f00d2f333
